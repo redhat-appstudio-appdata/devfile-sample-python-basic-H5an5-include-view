@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: my-devfile-sample-python-basic-gufa
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: my-devfile-sample-python-basic-gufa
+    app.kubernetes.io/part-of: devfile-sample-python-basic
+  name: my-devfile-sample-python-ag5i
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: my-devfile-sample-python-basic-gufa
+    weight: null
+status: {}

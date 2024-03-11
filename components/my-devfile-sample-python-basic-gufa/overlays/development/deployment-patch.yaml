@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: my-devfile-sample-python-basic-gufa
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/mzidek-tenant/devfile-sample-python-basic/my-devfile-sample-python-basic-gufa@sha256:c501a071c81a7a00d79fd665c73e92e75fedf8edebe8d4fc3e8c583511b60c27
+        name: my-python
+        resources: {}
+status: {}
